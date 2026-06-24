@@ -512,9 +512,12 @@
 
     .console-metrics {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 8px;
       margin-top: 12px;
+    }
+    @media (max-width: 600px) {
+      .console-metrics { grid-template-columns: repeat(2, 1fr); }
     }
     .c-metric {
       background: var(--bg-card);
@@ -1380,7 +1383,6 @@
 
     @media (max-width: 480px) {
       .proof-grid { grid-template-columns: 1fr; }
-      .console-metrics { grid-template-columns: repeat(3, 1fr); }
       .hero-actions { flex-direction: column; }
       .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
     }
@@ -1431,7 +1433,7 @@
     <div class="hero-copy">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-dot"></div>
-        <span class="label">AI As A Service — Ops Console Active</span>
+        <span class="label">Revenue Operating System — 4 Agents Active</span>
       </div>
 
       <h1 class="display-xl hero-title">
@@ -1441,7 +1443,7 @@
       </h1>
 
       <p class="hero-sub">
-        While your competition manually manages leads and hopes their team performs, you'll have AI generating revenue, converting prospects, and showing you exactly why you're winning — 24/7, without pause.
+        BadAAAS deploys AI media buying, AI sales agents, automated follow-up sequences, lead scoring intelligence, and workflow automation — one unified revenue system that runs, learns, and optimizes itself around the clock.
       </p>
 
       <div class="hero-actions">
@@ -1481,37 +1483,37 @@
           <div class="console-dot dot-yellow"></div>
           <div class="console-dot dot-green"></div>
         </div>
-        <span class="console-title">badaaas.ops / workforce-console v2.6</span>
-        <span class="console-status">ALL SYSTEMS ACTIVE</span>
+        <span class="console-title">badaaas-os / revenue-workforce v3.1</span>
+        <span class="console-status">4/4 AGENTS LIVE</span>
       </div>
       <div class="console-body">
         <div style="margin-bottom:10px;">
-          <span class="label label-dim">ACTIVE AGENTS</span>
+          <span class="label label-dim">WORKFORCE STATUS</span>
         </div>
         <div class="agent-list">
           <div class="agent-row">
             <div class="agent-icon icon-media">📡</div>
             <div class="agent-info">
-              <div class="agent-name">AI Media Buyer</div>
-              <div class="agent-task">Killing underperforming ad set — Meta CPA $12.40</div>
+              <div class="agent-name">AGT-01 / AI Media Buyer</div>
+              <div class="agent-task">Reallocating budget — Meta top performer +$4.2k ROAS today</div>
             </div>
-            <div class="agent-metric">-34% CPA</div>
+            <div class="agent-metric">-31% CPA</div>
             <div class="agent-badge badge-opt">OPTIMIZING</div>
           </div>
           <div class="agent-row">
             <div class="agent-icon icon-sales">🎯</div>
             <div class="agent-info">
-              <div class="agent-name">AI Sales Agent</div>
-              <div class="agent-task">Qualifying inbound lead — Pinnacle Investments</div>
+              <div class="agent-name">AGT-02 / AI Sales Agent</div>
+              <div class="agent-task">Active call — Pinnacle Investments, intent: HIGH</div>
             </div>
-            <div class="agent-metric">+42% book</div>
+            <div class="agent-metric">+44% booked</div>
             <div class="agent-badge badge-active">LIVE</div>
           </div>
           <div class="agent-row">
             <div class="agent-icon icon-intel">📊</div>
             <div class="agent-info">
-              <div class="agent-name">Leadr Intelligence</div>
-              <div class="agent-task">Scoring 47 conversations, flagging 3 closers</div>
+              <div class="agent-name">AGT-03 / Lead Scoring Engine</div>
+              <div class="agent-task">52 leads ranked — 4 flagged for immediate close</div>
             </div>
             <div class="agent-metric">97% scored</div>
             <div class="agent-badge badge-active">LIVE</div>
@@ -1519,31 +1521,35 @@
           <div class="agent-row">
             <div class="agent-icon icon-ops">⚙️</div>
             <div class="agent-info">
-              <div class="agent-name">Ops Automator</div>
-              <div class="agent-task">Onboarding sequence triggered — Express Mortgage</div>
+              <div class="agent-name">AGT-04 / Workflow Automator</div>
+              <div class="agent-task">Follow-up seq. deployed — Express Mortgage (step 3/7)</div>
             </div>
-            <div class="agent-metric">100% follow</div>
+            <div class="agent-metric">100% exec</div>
             <div class="agent-badge badge-learn">LEARNING</div>
           </div>
         </div>
         <div class="console-log" id="consoleLog">
-          <div class="log-line"><span class="ts">15:54:02</span> <span class="ev-green">[OPTIMIZED]</span> Google Ads — CPA dropped $18→$11. Budget reallocated.</div>
-          <div class="log-line"><span class="ts">15:54:18</span> <span class="ev-cyan">[BOOKED]</span> Trujillo Funeral Homes — 3 inbound xfers → appointments.</div>
-          <div class="log-line"><span class="ts">15:54:41</span> <span class="ev-amber">[SIGNAL]</span> Leadr: Rep #4 close rate 78%. Cloning conversation patterns.</div>
-          <div class="log-line"><span class="ts">15:55:00</span> <span class="ev-green">[REVENUE]</span> Solarsphere — $32k pipeline closed. ROI 4.1x. <span class="log-cursor"></span></div>
+          <div class="log-line"><span class="ts">16:04:11</span> <span class="ev-green">[AD_OPT]</span> Google Ads — underperforming set paused. CPA $18→$10.90.</div>
+          <div class="log-line"><span class="ts">16:04:33</span> <span class="ev-cyan">[BOOKED]</span> Trujillo Funeral Homes — 3 inbound calls routed → 3 appts set.</div>
+          <div class="log-line"><span class="ts">16:04:58</span> <span class="ev-amber">[SCORED]</span> Lead #2741 — intent: HIGH. Transferred to senior rep queue.</div>
+          <div class="log-line"><span class="ts">16:05:14</span> <span class="ev-green">[CLOSED]</span> Solarsphere — $32k deal closed. AGT-02 last touch. ROI 4.1x. <span class="log-cursor"></span></div>
         </div>
         <div class="console-metrics">
           <div class="c-metric">
-            <div class="c-metric-val" id="counter-leads">0</div>
-            <div class="c-metric-lbl">Leads Today</div>
+            <div class="c-metric-val">150+</div>
+            <div class="c-metric-lbl">Businesses Served</div>
           </div>
           <div class="c-metric">
-            <div class="c-metric-val" id="counter-convs">0%</div>
-            <div class="c-metric-lbl">Conv. Rate</div>
+            <div class="c-metric-val">$2M+</div>
+            <div class="c-metric-lbl">Revenue Generated</div>
           </div>
           <div class="c-metric">
-            <div class="c-metric-val" id="counter-rev">$0k</div>
-            <div class="c-metric-lbl">Rev. Pipeline</div>
+            <div class="c-metric-val">72hr</div>
+            <div class="c-metric-lbl">Avg. Deployment</div>
+          </div>
+          <div class="c-metric">
+            <div class="c-metric-val">97%</div>
+            <div class="c-metric-lbl">Satisfaction Rate</div>
           </div>
         </div>
       </div>
@@ -2181,44 +2187,18 @@
 
   reveals.forEach(el => revealObs.observe(el));
 
-  /* ── COUNTER ANIMATION ───────────────────────── */
-  function animateCounter(el, target, suffix, duration) {
-    const start = performance.now();
-    const update = (now) => {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(eased * target);
-      el.textContent = current + suffix;
-      if (progress < 1) requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
-  }
-
-  const heroSection = document.getElementById('hero');
-  let countersStarted = false;
-  const heroObs = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && !countersStarted) {
-      countersStarted = true;
-      setTimeout(() => {
-        animateCounter(document.getElementById('counter-leads'), 247, '', 1200);
-        animateCounter(document.getElementById('counter-convs'), 34, '%', 1400);
-        animateCounter(document.getElementById('counter-rev'), 182, 'k', 1600);
-      }, 800);
-    }
-  }, { threshold: 0.3 });
-  heroObs.observe(heroSection);
+  /* ── CONSOLE METRICS: static proof values, no counter animation ── */
 
   /* ── LIVE LOG ROTATION ───────────────────────── */
   const logMessages = [
-    { ts: '15:55:12', cls: 'ev-cyan',  text: '[BOOKED] Carma Auto Group — 2 test drives scheduled via AI front desk.' },
-    { ts: '15:55:29', cls: 'ev-green', text: '[OPTIMIZED] TikTok CPA reduced 28%. Budget auto-shifted to top performer.' },
-    { ts: '15:55:47', cls: 'ev-amber', text: '[SIGNAL] IAPDA: 3 high-intent leads flagged. Transferring to senior reps.' },
-    { ts: '15:56:01', cls: 'ev-green', text: '[REVENUE] Express Mortgage — deal #9 this month closed. AI follow-up was last touch.' },
-    { ts: '15:56:18', cls: 'ev-cyan',  text: '[LEARNING] Sales Agent updated: absorbed 12 new top-performing conversation patterns.' },
-    { ts: '15:56:35', cls: 'ev-amber', text: '[ALERT] Meta ad set paused — CPA exceeded threshold. New variant launching.' },
-    { ts: '15:56:52', cls: 'ev-green', text: '[BOOKED] Pinnacle Investments — 5x dials/hr. 7% connect-to-close rate maintained.' },
-    { ts: '15:57:08', cls: 'ev-cyan',  text: '[OPTIMIZED] Solarsphere — homeowner targeting sharpened. $32k pipeline active.' },
+    { ts: '16:05:31', cls: 'ev-cyan',  text: '[BOOKED] Carma Auto Group — 2 test drives confirmed. AGT-02 handled end-to-end.' },
+    { ts: '16:05:48', cls: 'ev-green', text: '[AD_OPT] TikTok CPA -28%. AGT-01 reallocated $840 to top-performing creative.' },
+    { ts: '16:06:04', cls: 'ev-amber', text: '[SCORED] IAPDA: 3 leads at 94+ score. Routed to rep queue — ETA 2 min.' },
+    { ts: '16:06:19', cls: 'ev-green', text: '[CLOSED] Express Mortgage — deal #9 this month. AGT-04 follow-up was final touch.' },
+    { ts: '16:06:36', cls: 'ev-cyan',  text: '[TRAINED] AGT-02 updated — absorbed 12 high-converting conversation patterns.' },
+    { ts: '16:06:52', cls: 'ev-amber', text: '[AD_OPT] Meta variant A paused — CPA threshold breached. Variant B launching.' },
+    { ts: '16:07:08', cls: 'ev-green', text: '[BOOKED] Pinnacle Investments — 5 appts set this hour. 7.2% connect-to-book.' },
+    { ts: '16:07:24', cls: 'ev-cyan',  text: '[PIPELINE] Solarsphere — $32k active. AGT-03 flagged 2 deals for same-week close.' },
   ];
   let logIndex = 0;
   const consoleLog = document.getElementById('consoleLog');
